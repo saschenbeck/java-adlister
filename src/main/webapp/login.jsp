@@ -14,7 +14,7 @@
 <body>
 
 <p>Path: <%= request.getRequestURL() %></p>
-<c:if test="${param.username.equalsIgnoreCase('Admin') && param.password.equalsIgnoreCase('password')}">
+<c:if test="${param.username.equalsIgnoreCase('Admin') && param.password.equals('password')}">
     <% response.sendRedirect("/profile.jsp");%>
 </c:if>
 
