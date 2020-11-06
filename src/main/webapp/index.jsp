@@ -2,13 +2,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Ads Index</title>
+    <title>Ads</title>
 </head>
 <body>
-<h1>Here is a list of all the ads.</h1>
+
 <c:forEach var="ad" items="${ads}">
-    <h3>${ad.title}</h3>
-    <p>${ad.description}</p>
+    <h5>${ad.getTitle()}</h5>
+    <p>${ad.getDescription()}</p>
+    <hr>
 </c:forEach>
 </body>
 </html>
